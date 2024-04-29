@@ -1,0 +1,38 @@
+{
+  "name": "Zazu-Bot",
+  "website": "https://github.com/Sniperghost662009",
+  "description": "Por Tryzer",
+  "repository": "https://github.com/Sniperghost662009/Zazu-Bot",
+  "logo": "https://raw.githubusercontent.com/Sniperghost662009/Jotchua/master/src/pictures/heroku-icon.jpg",
+  "success_url": "https://github.com/Sniperghost662009/Zazu-Bot",
+  "keywords": [
+    "nodejs",
+    "heroku",
+    "bot",
+    "bots",
+    "bot",
+    "spanish",
+    "whatsapp",
+    "termux",
+    "shadow",
+    "multi-device",
+    "md",
+    "whatsappbot",
+    "oficial",
+    "whatsapp-md",
+    "bot",
+    "Zazu",
+    "Zazu"],
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/bogini/heroku-buildpack-graphicsmagick"
+    }    
+ ]
+}
