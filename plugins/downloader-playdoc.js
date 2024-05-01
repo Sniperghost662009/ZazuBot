@@ -19,7 +19,7 @@ contextInfo: {
 forwardingScore: 9999, 
 isForwarded: true, 
 externalAdReply: {
-title: botname,
+title: wm,
 body: textbot,
 thumbnailUrl: img,
 thumbnail: img,
