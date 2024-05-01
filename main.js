@@ -261,7 +261,7 @@ function clearTmp() {
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./JTSession")
+let directorio = readdirSync("./ZazuSeS")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-') /*|| file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-') */
 })
@@ -292,7 +292,7 @@ console.log(chalk.bold.red(`❌  Algo salio mal durante la eliminación, archivo
 }}
 
 function purgeOldFiles() {
-const directories = ['./JTSession/', './jadibts/']
+const directories = ['./ZazuSeS/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -327,12 +327,12 @@ if (opcion == '1' || methodCodeQR) {
     console.log(chalk.yellow('Escanea el código QR.'));
  }}
    if (connection == 'open') {
-console.log(chalk.yellowBright('\n╭━─━━─━━─━─≪ 🐶 ≫─━─━━─━━─━╮\n│\n│Jotchua-Mini Conectado✅.\n│\n╰━─━━━─━━─━─≪ 🟢 ≫─━─━━─━━━─━╯\n'))
+console.log(chalk.yellowBright('\n╭━─━━─━━─━─≪ 😺 ≫─━─━━─━━─━╮\n│\n│ZaZu Conectado✅.\n│\n╰━─━━━─━━─━─≪ 🟢 ≫─━─━━─━━━─━╯\n'))
  await conn.groupAcceptInvite('GR9pMnqYI8DB9HoJnl2HkB');
    }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
-await fs.unlinkSync("./JTSession/" + "creds.json")
+await fs.unlinkSync("./ZazuSeS/" + "creds.json")
 console.log(chalk.bold.redBright(`Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
 process.send('reset')}
 if (connection === 'close') {
@@ -560,7 +560,7 @@ setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   const _uptime = process.uptime() * 1000;
   const uptime = clockString(_uptime);
-  const bio = ` 𝑱𝒐𝒕𝒄𝒉𝒖𝒂-𝑩𝒐𝒕-𝑴𝒊𝒏𝒊 |⌛ 𝑻𝒊𝒆𝒎𝒑𝒐 𝑨𝒄𝒕𝒊𝒗𝒐: ${uptime}`;
+  const bio = `Wazaaaa | tiempo activo: ${uptime}`;
   await conn.updateProfileStatus(bio).catch((_) => _);
 }, 60000);
 function clockString(ms) {
