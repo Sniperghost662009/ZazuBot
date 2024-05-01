@@ -1,4 +1,4 @@
-/*import fetch from "node-fetch"
+import fetch from "node-fetch"
 import yts from "yt-search"
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
@@ -27,7 +27,6 @@ sourceUrl: canal,
 mediaType: 1,
 renderLargerThumbnail: true
 }}}, { quoted: m})
-await m.react('✅')
 } catch {
 await m.reply(`${global.error}`)
 }}
