@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) return conn.reply(m.chat,  `*_ingresa el nombre de algun artista de spotify_*\n\n*ejemplo:*  ${usedPrefix + command} LIT killah, Milo J, Ronny J - Carta de Despedida (Official Video)`, m, fake, )
+if (!text) return conn.reply(m.chat,  `*_ingresa el nombre de algun artista de spotify_*\n\n*ejemplo:*  ${usedPrefix + command} LIT killah, Milo J, Ronny J - Carta de Despedida (Official Video)`, m )
   try {
     let resultados = await spotifyxv(text)
     let res = resultados.map((v, i) => {
