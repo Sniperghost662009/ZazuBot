@@ -76,7 +76,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 > *${groupsIn.length - groupsIn.length}* Grupos Salidos
 > *${chats.length - groupsIn.length}* Chats Privados
 > *${chats.length}* Chats Totales`
-await conn.reply(m.chat, teks, m, { contextInfo: { mentionedJid: [owner[0][0] + '@s.whatsapp.net'], externalAdReply: { mediaUrl: false, mediaType: 1, description: false, title: '✦╎Info - Bot╎',body: false, previewType: 0, thumbnail: catalogo, sourceUrl: channel}}})
+await conn.reply(m.chat, teks, m, { contextInfo: { mentionedJid: [owner[0][0] + '@s.whatsapp.net'], externalAdReply: { mediaUrl: false, mediaType: 1, description: false, title: '✦╎Info - Bot╎',body: false, previewType: 0, thumbnail: catalogo, sourceUrl: group}}})
 }
 
 handler.help = ['info']
