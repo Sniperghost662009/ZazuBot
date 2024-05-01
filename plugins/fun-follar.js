@@ -1,4 +1,3 @@
-
 let handler = async (m, { conn, command, text }) => {
 if (!text) throw `*Ingresa el @ o el nombre de la persona que quieras saber si te puedes ${command.replace('how', '')}*`
 try {
