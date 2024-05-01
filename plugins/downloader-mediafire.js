@@ -16,7 +16,7 @@ conn.sendMessage(m.chat, {
 text: caption,
 contextInfo: {
 externalAdReply: {
-title: botname,
+title: wm,
 body: 'bodynya',
 thumbnailUrl: 'https://telegra.ph/file/362fa2d3ade8f61b1276f.jpg',
 sourceUrl: [global.linkgc, global.linkgc2, global.linkgc3, global.linkgc4, global.linkgc5].getRandom(),
