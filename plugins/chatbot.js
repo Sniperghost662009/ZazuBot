@@ -24,7 +24,7 @@ conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
 
 if (/^Bot de mierda|que bot de mierda|este bot de mierda|bot inutil|mierda de bot$/i.test(m.text) ) { //sin prefijo 
     let teks = `
-${pickRandom([`a`, `po q`])}
+${pickRandom([`_a_`, `_po q_`])}
 `.trim()
 conn.reply(m.chat, teks, m, { mentions: { mentionedJid: [m.sender] }})
 
