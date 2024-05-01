@@ -4,7 +4,7 @@ let totalf = Object.values(global.plugins).filter(
   ).length;
 conn.reply(m.chat, `  *T O T A L - P L U G I N S*
 
-╭──────────────────────\n✯ *_plugins:_* ${totalf}\n╰──────────────────────`, m, fake, )
+╭──────────────────────\n✯ *_plugins:_* ${totalf}\n╰──────────────────────`, m, )
 }
 
 handler.help = ['totalplugins']
