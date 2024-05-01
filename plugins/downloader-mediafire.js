@@ -11,7 +11,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 *📄 Tipo:* ${ext}
 *🕐 Subido:* ${aploud}
 `.trim()
-if (filesizeH.split('MB')[0] >= limit) return m.reply(`El archivo pesa mas de ${limit} MB, se canceló la Descarga.`).then(_ => m.react('✖️'))
+if (filesizeH.split('MB')[0] >= limit) return m.reply(`El archivo pesa mas de ${limit} MB, se canceló la Descarga.`).then(_ => ('✖️'))
 conn.sendMessage(m.chat, {
 text: caption,
 contextInfo: {
