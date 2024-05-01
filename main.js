@@ -407,6 +407,14 @@ global.reloadHandler = async function(restatConn) {
   conn.sIcon = '╭──────────────────────\n✯ *Se cambio la foto del grupo*';
   conn.sRevoke = '╭──────────────────────\n✯ *Se restablecio el enlace del grupo* \n╰──────────────────────';
 
+  conn.handler = handler.handler.bind(global.conn);
+  conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
+  conn.groupsUpdate = handler.groupsUpdate.bind(global.conn);
+  conn.onDelete = handler.deleteUpdate.bind(global.conn);
+  conn.onCall = handler.callUpdate.bind(global.conn);
+  conn.connectionUpdate = connectionUpdate.bind(global.conn);
+  conn.credsUpdate = saveCreds.bind(global.conn, true);
+ 
   const currentDateTime = new Date();
   const messageDateTime = new Date(conn.ev);
   if (currentDateTime >= messageDateTime) {
