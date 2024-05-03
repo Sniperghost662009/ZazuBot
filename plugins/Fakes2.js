@@ -12,7 +12,7 @@ export async function before(m, { conn }) {
 					description: null,
 					previewType: "PHOTO",
 					thumbnail: catalogo,
-					sourceUrl: channel
+					sourceUrl: group
 				}
 			}
 		}
@@ -30,7 +30,7 @@ export async function before(m, { conn }) {
 					description: null,
 					previewType: "PHOTO",
 					thumbnail: catalogo,
-					sourceUrl: channel
+					sourceUrl: group
 				}
 			}
 		}
@@ -48,7 +48,7 @@ export async function before(m, { conn }) {
 					description: null,
 					previewType: "PHOTO",
 					thumbnail: catalogo,
-					sourceUrl: channel
+					sourceUrl: group
 				}
 			}
 		}
@@ -65,7 +65,7 @@ export async function before(m, { conn }) {
 					description: null,
 					previewType: "PHOTO",
 					thumbnail: catalogo,
-					sourceUrl: channel
+					sourceUrl: group
 				}
 			}
 		}
@@ -82,7 +82,7 @@ export async function before(m, { conn }) {
 					description: null,
 					previewType: "PHOTO",
 					thumbnail: catalogo,
-					sourceUrl: channel
+					sourceUrl: group
 				}
 			}
 		}
