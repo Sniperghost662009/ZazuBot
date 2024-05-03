@@ -25,9 +25,9 @@ let msg = generateWAMessageFromContent(m.chat, {
           nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
             buttons: [
               {
-                "
+   
                  "name": "cta_copy",
-                 "buttonParamsJson": "{\"FYTG-9JGH\":\"copy\",\"id\":\"123456789\",\"copy_code\":\"message\"} 
+                 "buttonParamsJson": "{\"FYTG-9JGH\":\"copy\",\"id\":\"123456789\",\"copy_code\":\"message\"}"
            ],
           })
         })
