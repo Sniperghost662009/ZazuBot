@@ -26,10 +26,10 @@ global.prems = []
 global.packname = ''
 global.author = '{\n "bot": {\n   "name": "Tryzer",\n     "author": "Tryzer Snipe",\n   "status_bot": "active"\n }\n}'
 global.desc = 'Simple WhatsApp Bot Multi Device'
-global.namebot = '© TryzerBot- MD / Nakano - Team'
+global.namebot = '© ZazuBot'
 global.wait = '*Cargando. . .*'
-global.gcname = 'TryzerBot- MD'
-global.wm = ''
+global.gcname = 'ZazuBot'
+global.wm = 'ZazuBot'
 
 //━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
@@ -59,11 +59,11 @@ global.group = 'https://chat.whatsapp.com/GR9pMnqYI8DB9HoJnl2HkB'
 
 global.adanime = `🌸 | Anime By Ai Hoshino - MD 🈴` 
 global.addescargas = `📤 | Descargas By Tryzer - MD `
-global.adimagen = `🌅 | Imágenes By Tryzer- MD 🌿` 
+global.adimagen = `🌅 | Imágenes By ZazuBot- MD 🌿` 
 global.adyoutube = `🍁 | Descargas de YouTube 📤` 
-global.adsticker = `🏞️ | Stickers By Tryzer - MD 🌺` 
-global.adsearch  = `🔎 | Busquedas By Tryzer - MD 🐢` 
-global.adnsfw = `🔞 | Nsfw By Tryzer- MD ⭐`
+global.adsticker = `🏞️ | Stickers By ZazuBot - MD 🌺` 
+global.adsearch  = `🔎 | Busquedas By ZazuBot - MD 🐢` 
+global.adnsfw = `🔞 | Nsfw By ZazuBot- MD ⭐`
 
 //━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
@@ -75,6 +75,6 @@ global.maxwarn = '2' // máxima advertencias
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
   unwatchFile(file)
-  console.log(chalk.redBright("Update './plugins/config.js'"))
+  console.log(chalk.redBright("Update './config.js'"))
   import(`${file}?update=${Date.now()}`)
 })
