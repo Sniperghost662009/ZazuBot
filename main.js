@@ -1,5 +1,5 @@
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1';
-import './plugins/config.js';
+import './config.js';
 import './api.js';
 import {createRequire} from 'module';
 import path, {join} from 'path';
