@@ -130,3 +130,14 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
                 await sleep(5000)
                 if (args[0]) return
                 await parent.sendMessage(conn.user.jid, {text : `✅ La siguiente vez que se conecte envía el siguiente
+                }
+handler.help = ['ᴄᴏᴅᴇ']
+handler.tags = ['jadibot']
+handler.command = ['code2']
+//handler.rowner = false
+
+export default handler
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
