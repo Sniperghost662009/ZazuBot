@@ -81,28 +81,53 @@ const connectionOptions = {
 //--
 let conn = makeWASocket(connectionOptions)
 
-if (methodCode && !conn.authState.creds.registered) {
-    if (!phoneNumber) {
-        //parent.sendMessage(m.chat, { text: `✴️ Su número de teléfono no está definido` }, { quoted: m })
-        process.exit(0);
-    }
-    let cleanedNumber = phoneNumber.replace(/[^0-9]/g, '');
-    if (!Object.keys(PHONENUMBER_MCC).some(v => cleanedNumber.startsWith(v))) {
-        //parent.sendMessage(m.chat, { text: `✴️ Su número debe comenzar con el código de país` }, { quoted: m })
-        process.exit(0);
+async function bbts() {
+
+    // Tu código existente aquí...
+
+    if (methodCode && !conn.authState.creds.registered) {
+        if (!phoneNumber) {
+            process.exit(0);
+        }
+        let cleanedNumber = phoneNumber.replace(/[^0-9]/g, '');
+        if (!Object.keys(PHONENUMBER_MCC).some(v => cleanedNumber.startsWith(v))) {
+            process.exit(0);
+        }
+
+        setTimeout(async () => {
+            let codeBot = await conn.requestPairingCode(cleanedNumber);
+            codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
+
+            // Código para generar el botón de copiar
+            let buttonMessage = `*S E R B O T - C O D E 🌿*\n\n*Usa este Código para convertirte en Bot*\n\n1. Haga click en los tres puntos en la esquina superior derecha.\n2. Toque Dispositivos vinculados\n3. Selecciona *Vincular con el número de teléfono*\n\n*Nota:* El código solo sirve para este número`;
+            let buttonCopy = `Copia el código`;
+            let buttonData = `${codeBot}`;
+
+            // Envío del mensaje con el botón de copiar
+            await conn.sendMessage(m.chat, buttonMessage, MessageType.text, {
+                quoted: m,
+                contextInfo: {
+                    buttons: [{
+                        buttonId: "button-copiar",
+                        buttonText: {
+                            displayText: buttonCopy
+                        },
+                        type: 1,
+                        options: {
+                            type: 1,
+                            phoneNumber: m.sender.split('@')[0],
+                            data: buttonData
+                        }
+                    }]
+                }
+            });
+            
+            rl.close();
+        }, 3000);
     }
 
-    setTimeout(async () => {
-        let codeBot = await conn.requestPairingCode(cleanedNumber);
-        codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
-        //parent.sendMessage(m.chat, { text: `➤ Code: *${codeBot}*\n\n${mssg.botqr}` }, { quoted: m })
-await m.reply(`*S E R B O T - C O D E 🌿*\n\n*Usa este Código para convertirte en Bot*\n\n1. Haga click en los tres puntos en la esquina superior derecha.\n2. Toque Dispositivos vinculados\n3. Selecciona *Vincular con el número de teléfono*\n\n*Nota:* El código solo sirve para este número`)
-await m.reply(`${codeBot}`)
-        rl.close();
-    }, 3000);
+    // Tu código existente aquí...
 }
-
-conn.isInit = false
 
 //---new
 let isInit = true
