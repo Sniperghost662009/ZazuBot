@@ -64,15 +64,13 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
             defaultQueryTimeoutMs: undefined,
             version
       }
-async function bbts() {
-    let authFolderB = crypto.randomBytes(10).toString('hex').slice(0, 8)
+// Define methodCode aquí
+let phoneNumber = m.sender.split('@')[0]
+const methodCode = !!phoneNumber || process.argv.includes("code")
 
-    let phoneNumber = m.sender.split('@')[0]
-    const methodCode = !!phoneNumber || process.argv.includes("code") 
-   
-}
-
-            let conn = makeWASocket(connectionOptions)
+// Llama a la función bbts() después de definir methodCode
+bbts();
+  let conn = makeWASocket(connectionOptions)
 
         if (methodCode && !conn.authState.creds.registered) {
             if (!phoneNumber) {
