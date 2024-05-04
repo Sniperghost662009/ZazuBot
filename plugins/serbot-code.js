@@ -122,8 +122,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         }
     }, {});
 }
-
-	    await m.reply(`${codeBot}`)
         rl.close();
     }, 3000);
 }
