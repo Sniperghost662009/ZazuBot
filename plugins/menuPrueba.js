@@ -1,8 +1,7 @@
-import fetch from 'node-fetch';
-const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
-global.img6 = fs.readFileSync ('./Menu2.jpg');
-  if (usedPrefix == 'a' || usedPrefix == 'A') return;
-  
+import { promises } from 'fs'
+import { join } from 'path'
+import fetch from 'node-fetch'
+import { xpRange } from '../lib/levelling.js'
     const pp = img6
     const img = './Menu2.jpg';
     const d = new Date(new Date + 3600000);
