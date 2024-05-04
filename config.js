@@ -18,12 +18,13 @@ global.owner = [
 
 //━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
-global.mods = []
-global.prems = []
+global.mods = [524922108173]
+global.prems = [524922108173]
+global.ROwner = [524922108173]
 
 //━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
-global.packname = ''
+global.packname = ' ZazuBot'
 global.author = '{\n "bot": {\n   "name": "Tryzer",\n     "author": "Tryzer Snipe",\n   "status_bot": "active"\n }\n}'
 global.desc = 'Simple WhatsApp Bot Multi Device'
 global.namebot = '© ZazuBot'
@@ -49,7 +50,7 @@ global.thumbnail = fs.readFileSync('./Menu.png')
 
 //━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'Ai Hoshino - MD', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'ZazuBot', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
 //━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
