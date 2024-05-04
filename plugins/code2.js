@@ -232,7 +232,7 @@ bbts()
 }
 handler.help = ['ᴄᴏᴅᴇ']
 handler.tags = ['jadibot']
-handler.command = ['code']
+handler.command = ['code2']
 //handler.rowner = false
 
 export default handler
