@@ -1510,8 +1510,8 @@ export async function callUpdate(callUpdate) {
         const callmsg = await mconn.conn.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, las ${nk.isVideo ? 'videollamadas' : 'llamadas'} no están permitidas, serás bloqueado.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, {mentions: [nk.from]});
         // let data = global.owner.filter(([id, isCreator]) => id && isCreator)
         // await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;ALS👑;;;\nFN:ALS👑\nORG:ALS👑\nTITLE:\nitem1.TEL;waid=5219992095479:+5491156673266\nitem1.X-ABLabel:ALS👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:ALS👑\nEND:VCARD`;
-        await mconn.conn.sendMessage(nk.from, {contacts: {displayName: 'ALS👑', contacts: [{vcard}]}}, {quoted: callmsg});
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;Tryzer👑;;;\nFN:Tryzer👑\nORG:Tryzer👑\nTITLE:\nitem1.TEL;waid=5219992095479:+524922108173\nitem1.X-ABLabel:Tryzer👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:Tryzer👑\nEND:VCARD`;
+        await mconn.conn.sendMessage(nk.from, {contacts: {displayName: 'Tryzer👑', contacts: [{vcard}]}}, {quoted: callmsg});
         await mconn.conn.updateBlockStatus(nk.from, 'block');
       }
     }
@@ -1547,19 +1547,19 @@ let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'nu
 
 global.dfail = (type, m, conn) => {
   const msg = {
-    rowner: '*Este comando solo puede ser utilizado por *ᴀʟꜱ*',
-    owner: '*Este comando solo puede ser utilizado por un _*BOT*_!',
-    mods: '*Este comando solo puede ser utilizado por un _*Moderador*_!',
+    rowner: '*Este comando solo puede ser utilizado por Tryzer*',
+    owner: '*Este comando solo puede ser utilizado por un Tryzer!*',
+    mods: '*Este comando solo puede ser utilizado por un _*Moderador_*!',
     premium: '*Este comando solo puede ser utilizado por miembros _*Premium*_',
     group: '*Este comando solo puede ser utilizado en un grupo!!*',
     private: '*Este comando solo puede ser utilizado en el privado de la Bot*',
     admin: '*Este comando solo puede ser utilizado por *Admins* del grupo!',
     botAdmin: '*Haga el bot *Admin* del grupo para utilizar este comando!!',
-    unreg: '*Para usar el bot debes registrarte primero\n\nUtiliza: */reg nombre.edad*\n\n_Ejemplo: */reg ᴀʟꜱ.18*_\n\nNo pongas los * *',
+    unreg: '*Para usar el bot debes registrarte primero\n\nUtiliza: */reg nombre.edad*\n\n_Ejemplo: */reg Tryzer.18*_\n\nNo pongas los * *',
      restrict: '*ESTE COMANDO ESTA deshabilitado*!'
   }[type];
 /*  const aa = {quoted: m, userJid: conn.user.jid};
-  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '𝑱𝒐𝒕𝒄𝒉𝒖𝒂 - 𝑴𝑰𝑵𝑰', body: 'Whatsapp bot Multi device by als', thumbnail: catalogo, sourceUrl: channel}}}}, aa);
+  const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: 'Zazu-Bot', body: 'Whatsapp bot Multi device by Tryzer', thumbnail: catalogo, sourceUrl: group}}}}, aa);
   if (msg) return conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id});*/
     if (msg) return conn.reply(m.chat, msg, m)
 };
