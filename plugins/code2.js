@@ -63,7 +63,23 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
             msgRetryCounterCache,
             defaultQueryTimeoutMs: undefined,
             version
-        }
+      }
+                async function bbts() {
+    let authFolderB = crypto.randomBytes(10).toString('hex').slice(0, 8)
+
+    // Definir phoneNumber antes de methodCode
+    let phoneNumber = m.sender.split('@')[0]
+    const methodCode = !!phoneNumber || process.argv.includes("code")
+
+    // Resto del código...
+
+    const methodCodeQR = process.argv.includes("qr")
+    const MethodMobile = process.argv.includes("mobile")
+
+    // Resto del código...
+}
+
+        
 
         let conn = makeWASocket(connectionOptions)
 
