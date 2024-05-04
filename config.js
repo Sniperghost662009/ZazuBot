@@ -9,18 +9,13 @@ import moment from "moment-timezone"
  
 //⊱ ━━━━.⋅ Añada los numeros a ser Propietario/a ⋅.━━━ ⊰  
 
-global.owner = [
-  ['524922108173', 'Tryzer+Snipe', true],
-  ['18199751245'],
-  [''],
-  ['']
-] //Numeros de owner 
+global.owner = '524922108173', 'Tryzer+Snipe', true
 
 //━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
-global.mods = ['524922108173']
-global.prems = ['524922108173']
-global.ROwner = ['524922108173']
+global.mods = '524922108173'
+global.prems = '524922108173'
+global.ROwner = '524922108173'
 
 //━━━━━━━━━━━ ฅ^•ﻌ•^ฅ ━━━━━━━━━━━
 
