@@ -37,6 +37,6 @@ const handler = async (m, { conn, text }) => {
   }
  }
 };
-handler.command = /^(update|actualizar|gitpull|matarperuanos)$/i;
+handler.command = /^(update|actualizar|gitpull|matarperuanos|up)$/i;
 handler.rowner = true;
 export default handler;
