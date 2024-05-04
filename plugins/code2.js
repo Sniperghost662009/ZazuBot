@@ -179,6 +179,18 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
                 conn.ev.off('creds.update', conn.credsUpdate)
             }
 
+            async function bbts() {
+    let authFolderB = crypto.randomBytes(10).toString('hex').slice(0, 8)
+
+    // Resto del código...
+
+    const methodCodeQR = process.argv.includes("qr")
+    const methodCode = !!phoneNumber || process.argv.includes("code") // Definición de methodCode
+    const MethodMobile = process.argv.includes("mobile")
+
+    // Resto del código...
+}
+
             conn.welcome = global.conn.welcome + ''
             conn.bye = global.conn.bye + ''
             conn.spromote = global.conn.spromote + ''
