@@ -9,7 +9,7 @@ import moment from "moment-timezone"
  
 //⊱ ━━━━.⋅ Añada los numeros a ser Propietario/a ⋅.━━━ ⊰  
 
-global.owner = [
+plugin.owner = [
   ['524922108173', 'TryzerSnipe', true],
   ['18199751245'],
   [''],
