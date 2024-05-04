@@ -66,11 +66,10 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
             version
         }
 
-        // Define methodCode aquí
+        let conn = makeWASocket(connectionOptions)
+
         let phoneNumber = m.sender.split('@')[0]
         const methodCode = !!phoneNumber || process.argv.includes("code")
-
-        let conn = makeWASocket(connectionOptions)
 
         if (methodCode && !conn.authState.creds.registered) {
             // Resto del código...
@@ -108,4 +107,3 @@ export default handler
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-
