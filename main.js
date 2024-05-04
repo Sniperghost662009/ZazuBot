@@ -261,13 +261,13 @@ function clearTmp() {
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./JTSession")
+let directorio = readdirSync("./ZazuSeS")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-') /*|| file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-') */
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./JTSession/${files}`)
+unlinkSync(`./ZazuSeS/${files}`)
 })
 } 
 
