@@ -97,7 +97,33 @@ if (methodCode && !conn.authState.creds.registered) {
         codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
         //parent.sendMessage(m.chat, { text: `➤ Code: *${codeBot}*\n\n${mssg.botqr}` }, { quoted: m })
 await m.reply(`*S E R B O T - C O D E 🌿*\n\n*Usa este Código para convertirte en Bot*\n\n1. Haga click en los tres puntos en la esquina superior derecha.\n2. Toque Dispositivos vinculados\n3. Selecciona *Vincular con el número de teléfono*\n\n*Nota:* El código solo sirve para este número`)
-await m.reply(`${codeBot}`)
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+        
+    conn.relayMessage(m.chat, {
+        viewOnceMessage: {
+            message: {
+                interactiveMessage: {
+                    body: { text: 'Aquí está tu código:' },
+                    footer: { text: 'Presiona el botón para copiar' },
+                    nativeFlowMessage: {
+                        buttons: [
+                            {
+                                name: 'cta_copy',
+                                buttonParamsJson: JSON.stringify({
+                                    display_text: 'Copiar código',
+                                    copy_code: (`${codeBot}`), // Aquí se debe reemplazar codeBot con tu variable que contiene el código
+                                    id: 'copy_button'
+                                })
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }, {});
+}
+
+	    await m.reply(`${codeBot}`)
         rl.close();
     }, 3000);
 }
