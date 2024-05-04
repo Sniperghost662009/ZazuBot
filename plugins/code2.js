@@ -98,7 +98,7 @@ async function handler(m, { conn: _conn, args, usedPrefix, command, isOwner }) {
 
 handler.help = ['ᴄᴏᴅᴇ'];
 handler.tags = ['jadibot'];
-handler.command = ['code'];
+handler.command = ['code2'];
 
 export default handler;
 
