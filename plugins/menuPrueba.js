@@ -148,7 +148,7 @@ if (m.isGroup) {
 
 console.log(e)
   }};
-handler.command = /^(test)$/i;
+handler.command = /^(Menu2)$/i;
 handler.exp = 50;
 handler.fail = null;
 export default handler;
