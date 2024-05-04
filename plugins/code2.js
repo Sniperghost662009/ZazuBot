@@ -80,7 +80,6 @@ const connectionOptions = {
 
 //--
 let conn = makeWASocket(connectionOptions)
-
 if (methodCode && !conn.authState.creds.registered) {
     if (!phoneNumber) {
         //parent.sendMessage(m.chat, { text: `✴️ Su número de teléfono no está definido` }, { quoted: m })
@@ -96,20 +95,23 @@ if (methodCode && !conn.authState.creds.registered) {
         let codeBot = await conn.requestPairingCode(cleanedNumber);
         codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
         //parent.sendMessage(m.chat, { text: `➤ Code: *${codeBot}*\n\n${mssg.botqr}` }, { quoted: m })
-await m.reply(`*S E R B O T - C O D E 🌿*\n\n*Usa este Código para convertirte en Bot*\n\n1. Haga click en los tres puntos en la esquina superior derecha.\n2. Toque Dispositivos vinculados\n3. Selecciona *Vincular con el número de teléfono*\n\n*Nota:* El código solo sirve para este número`, null, {
-    contextInfo: {
-        buttons: [
-            { buttonId: 'copy_code', buttonText: { displayText: 'Copiar Código' }, type: 1 }
-        ]
-    }
-});
-await m.reply(`${codeBot}`, null, {
-    contextInfo: {
-        buttons: [
-            { buttonId: 'copy_code', buttonText: { displayText: 'Copiar Código' }, type: 1 }
-        ]
-    }
-});
+        await m.reply(`*S E R B O T - C O D E 🌿*\n\n*Usa este Código para convertirte en Bot*\n\n1. Haga click en los tres puntos en la esquina superior derecha.\n2. Toque Dispositivos vinculados\n3. Selecciona *Vincular con el número de teléfono*\n\n*Nota:* El código solo sirve para este número`, null, {
+            contextInfo: {
+                buttons: [
+                    { buttonId: 'copy_code', buttonText: { displayText: 'Copiar Código' }, type: 1 }
+                ]
+            }
+        });
+        await m.reply(`${codeBot}`, null, {
+            contextInfo: {
+                buttons: [
+                    { buttonId: 'copy_code', buttonText: { displayText: 'Copiar Código' }, type: 1 }
+                ]
+            }
+        });
+        rl.close();
+    }, 3000);
+}
 
 conn.isInit = false
 
